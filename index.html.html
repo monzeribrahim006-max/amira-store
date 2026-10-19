@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أميرة | لكُـل أميرة - تصاميم الأزياء الفاخرة الجاهزة للطباعة والتطريز</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Reem+Kufi:wght@500;700;800&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            100: '#fcf8e3',
+                            200: '#f7f0bd',
+                            300: '#eedd82',
+                            400: '#e5c448',
+                            500: '#D4AF37',
+                            600: '#aa8822',
+                            700: '#7f6318',
+                        },
+                        roseGold: {
+                            50: '#fdf7f8',
+                            100: '#fbeef0',
+                            200: '#f8dbe0',
+                            300: '#E8B4B8',
+                            400: '#da8a92',
+                            500: '#c7626d',
+                            600: '#af4753',
+                            700: '#8f353f',
+                        },
+                        burgundy: {
+                            900: '#1b0a10',
+                            800: '#2d0e1b',
+                            700: '#431227',
+                        },
+                        royalDark: '#0d0a0d',
+                        royalCard: '#18121a',
+                        whatsapp: '#25D366'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif'],
+                        kufi: ['Reem Kufi', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #0d0a0d;
+            color: #f3f4f6;
+        }
+        .royal-gradient-text {
+            background: linear-gradient(135deg, #fbeef0 0%, #E8B4B8 40%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-bg-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #aa8822 100%);
+        }
+        .rose-gold-gradient {
+            background: linear-gradient(135deg, #E8B4B8 0%, #c7626d 100%);
+        }
+        .vodafone-gradient {
+            background: linear-gradient(135deg, #e60000 0%, #8b0000 100%);
+        }
+        .glass-panel {
+            background: rgba(24, 18, 26, 0.88);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(232, 180, 184, 0.2);
+        }
+        .glass-card {
+            background: rgba(26, 20, 28, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .glass-card:hover {
+            border-color: rgba(232, 180, 184, 0.45);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0a0d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #251b27;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #E8B4B8;
+        }
+    </style>
+</head>
+<body class="bg-royalDark text-gray-200 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Navbar Header -->
+    <header class="sticky top-0 z-40 glass-panel border-b border-roseGold-300/20 shadow-2xl transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+                
+                <!-- Brand Logo & Slogan -->
+                <div class="flex items-center gap-3 cursor-pointer" onclick="resetFilters()">
+                    <div class="w-13 h-13 rounded-2xl rose-gold-gradient flex items-center justify-center text-black font-bold text-2xl shadow-xl shadow-roseGold-500/20 border border-gold-300">
+                        <i class="fa-solid fa-crown text-black"></i>
+                    </div>
+                    <div>
+                        <span class="text-3xl font-black tracking-wide royal-gradient-text font-kufi">أميرة</span>
+                        <span class="block text-xs text-roseGold-300 font-bold tracking-widest -mt-1 font-tajawal">أميرة لكُـل أميرة</span>
+                    </div>
+                </div>
+
+                <!-- Navigation Tabs (Categories & Prices) -->
+                <nav class="hidden lg:flex items-center gap-1.5 text-xs font-bold">
+                    <button onclick="setCategory('all')" id="nav-all" class="nav-btn px-4 py-2.5 rounded-xl text-roseGold-300 bg-roseGold-300/10 transition">الكل</button>
+                    <button onclick="setCategory('toub')" id="nav-toub" class="nav-btn px-4 py-2.5 rounded-xl text-gray-300 hover:text-roseGold-300 hover:bg-white/5 transition flex items-center gap-1">
+                        <span>الثوب السوداني</span>
+                        <span class="bg-gold-500/20 text-gold-300 px-1.5 py-0.5 rounded text-[10px]">20 ج.م</span>
+                    </button>
+                    <button onclick="setCategory('scarves')" id="nav-scarves" class="nav-btn px-4 py-2.5 rounded-xl text-gray-300 hover:text-roseGold-300 hover:bg-white/5 transition flex items-center gap-1">
+                        <span>الطرح والسكارفات</span>
+                        <span class="bg-gold-500/20 text-gold-300 px-1.5 py-0.5 rounded text-[10px]">10 ج.م</span>
+                    </button>
+                    <button onclick="setCategory('abayas')" id="nav-abayas" class="nav-btn px-4 py-2.5 rounded-xl text-gray-300 hover:text-roseGold-300 hover:bg-white/5 transition flex items-center gap-1">
+                        <span>العبايات</span>
+                        <span class="bg-gold-500/20 text-gold-300 px-1.5 py-0.5 rounded text-[10px]">15 ج.م</span>
+                    </button>
+                    <button onclick="setCategory('fullsets')" id="nav-fullsets" class="nav-btn px-4 py-2.5 rounded-xl text-gray-300 hover:text-roseGold-300 hover:bg-white/5 transition flex items-center gap-1">
+                        <span>الأطقم الكاملة</span>
+                        <span class="bg-roseGold-500/20 text-roseGold-300 px-1.5 py-0.5 rounded text-[10px]">50 ج.م</span>
+                    </button>
+                    <button onclick="scrollToCustomRequest()" class="px-3.5 py-2.5 text-gold-300 hover:text-gold-200 flex items-center gap-1.5 transition border border-gold-500/30 rounded-xl bg-gold-500/10 ms-2">
+                        <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
+                        <span>طلب خاص</span>
+                    </button>
+                </nav>
+
+                <!-- Search & Cart Trigger -->
+                <div class="flex items-center gap-3">
+                    <div class="relative hidden sm:block">
+                        <input type="text" id="searchInput" oninput="handleSearch()" placeholder="بحث في تصاميم أميرة..." class="bg-zinc-950/80 border border-zinc-800 text-xs rounded-full py-2.5 pr-10 pl-4 w-44 md:w-56 focus:outline-none focus:border-roseGold-300 text-gray-200 placeholder-zinc-500 transition">
+                        <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-3 text-zinc-500 text-xs"></i>
+                    </div>
+
+                    <!-- Cart Trigger Button -->
+                    <button onclick="toggleCartModal()" class="relative p-3 rounded-2xl bg-royalCard border border-gold-500/30 hover:border-gold-400 text-gold-300 transition shadow-lg">
+                        <i class="fa-solid fa-bag-shopping text-lg"></i>
+                        <span id="cartCount" class="absolute -top-1.5 -left-1.5 bg-roseGold-500 text-white text-xs font-black w-5.5 h-5.5 rounded-full flex items-center justify-center border-2 border-royalDark shadow">0</span>
+                    </button>
+
+                    <!-- Mobile Drawer Button -->
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-gray-300 hover:text-roseGold-300">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-zinc-800 bg-royalDark px-4 pt-4 pb-6 space-y-2">
+            <div class="mb-3">
+                <input type="text" id="searchInputMobile" oninput="handleSearchMobile()" placeholder="بحث عن تصميم..." class="w-full bg-zinc-950 border border-zinc-800 text-xs rounded-xl py-2.5 pr-10 pl-4 text-gray-200">
+            </div>
+            <button onclick="setCategory('all'); toggleMobileMenu()" class="block w-full text-right px-4 py-2.5 rounded-xl text-roseGold-300 bg-roseGold-300/10 font-bold">الكل</button>
+            <button onclick="setCategory('toub'); toggleMobileMenu()" class="block w-full text-right px-4 py-2.5 rounded-xl text-gray-300 flex justify-between items-center"><span>الثوب السوداني</span><span class="text-gold-300 text-xs">20 ج.م</span></button>
+            <button onclick="setCategory('scarves'); toggleMobileMenu()" class="block w-full text-right px-4 py-2.5 rounded-xl text-gray-300 flex justify-between items-center"><span>الطرح والسكارفات</span><span class="text-gold-300 text-xs">10 ج.م</span></button>
+            <button onclick="setCategory('abayas'); toggleMobileMenu()" class="block w-full text-right px-4 py-2.5 rounded-xl text-gray-300 flex justify-between items-center"><span>العبايات</span><span class="text-gold-300 text-xs">15 ج.م</span></button>
+            <button onclick="setCategory('fullsets'); toggleMobileMenu()" class="block w-full text-right px-4 py-2.5 rounded-xl text-gray-300 flex justify-between items-center"><span>الأطقم الكاملة (7 قطع)</span><span class="text-roseGold-300 text-xs">50 ج.م</span></button>
+            <button onclick="scrollToCustomRequest(); toggleMobileMenu()" class="block w-full text-right px-4 py-2.5 rounded-xl text-gold-300 font-bold bg-gold-500/10 border border-gold-500/20">طلب تصميم خاص</button>
+        </div>
+    </header>
+
+    <!-- Banner Hero Section -->
+    <section class="relative overflow-hidden py-10 sm:py-14 border-b border-zinc-800/80 bg-burgundy-900/30">
+        <div class="absolute inset-0 z-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-roseGold-300/10 text-roseGold-300 border border-roseGold-300/30 mb-3 shadow-inner">
+                <i class="fa-solid fa-crown text-gold-400"></i>
+                <span>المتجر الرقمي الرسمي لأرقى الماكينات والطباعة</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-kufi leading-tight mb-3">
+                تصاميم فاخرة لـ <span class="royal-gradient-text">أميرة لكُـل أميرة</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-zinc-400 text-xs sm:text-sm leading-relaxed font-light mb-6">
+                حمّلي فوراً ملفات التطريز والطباعة العالية الدقة (DST, EMB, EPS, PNG, PDF) بأسعار محددة ورمزية لمشروعكِ الخاص.
+            </p>
+
+            <!-- Price Highlights Badges -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs font-bold">
+                <div class="bg-royalCard/90 border border-gold-500/30 px-3.5 py-2 rounded-2xl flex items-center gap-2">
+                    <span class="text-zinc-400">الثوب السوداني:</span>
+                    <span class="text-gold-300 font-black text-sm">20 ج.م</span>
+                </div>
+                <div class="bg-royalCard/90 border border-gold-500/30 px-3.5 py-2 rounded-2xl flex items-center gap-2">
+                    <span class="text-zinc-400">الطرح والسكارفات:</span>
+                    <span class="text-gold-300 font-black text-sm">10 ج.م</span>
+                </div>
+                <div class="bg-royalCard/90 border border-gold-500/30 px-3.5 py-2 rounded-2xl flex items-center gap-2">
+                    <span class="text-zinc-400">العبايات:</span>
+                    <span class="text-gold-300 font-black text-sm">15 ج.م</span>
+                </div>
+                <div class="bg-royalCard/90 border border-roseGold-300/40 px-3.5 py-2 rounded-2xl flex items-center gap-2">
+                    <span class="text-zinc-400">الأطقم الكاملة:</span>
+                    <span class="text-roseGold-300 font-black text-sm">50 ج.م</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Main Store Body -->
+    <main id="productsSection" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full">
+        
+        <!-- Filters Bar -->
+        <div class="space-y-5 mb-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-zinc-800 pb-4">
+                <div>
+                    <h2 id="currentCategoryTitle" class="text-2xl sm:text-3xl font-black font-kufi text-white">
+                        جميع التصاميم
+                    </h2>
+                    <p id="currentCategoryDesc" class="text-zinc-400 text-xs mt-1">
+                        اختاري التصميم المناسب وسيتم إرسال الملفات الرقمية فور الدفع عبر فودافون كاش
+                    </p>
+                </div>
+
+                <!-- Sort Control -->
+                <div class="flex items-center gap-2">
+                    <label class="text-xs text-zinc-400 font-medium whitespace-nowrap">ترتيب حسب:</label>
+                    <select id="sortSelect" onchange="applyFilters()" class="bg-royalCard border border-zinc-700 text-xs text-gray-200 rounded-xl px-3 py-2 focus:outline-none focus:border-roseGold-300">
+                        <option value="newest">الأحدث إضافة</option>
+                        <option value="price-low">السعر: الأقل أولاً</option>
+                        <option value="price-high">السعر: الأعلى أولاً</option>
+                        <option value="popular">الأكثر تقييماً</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Subcategory Pattern Filters -->
+            <div class="space-y-2">
+                <span class="text-[11px] font-bold text-zinc-400 block">تصفية حسب نوع النقش والتصميم:</span>
+                <div class="flex items-center gap-2 overflow-x-auto pb-2" id="subCategoryContainer">
+                    <!-- Dynamic Subcategories -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Product Cards injected here -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="hidden text-center py-20 bg-royalCard rounded-3xl border border-zinc-800 my-8">
+            <i class="fa-solid fa-crown text-5xl text-zinc-700 mb-4"></i>
+            <h3 class="text-base font-bold text-gray-300">لا توجد تصاميم مطابقة لهذا الفلتر</h3>
+            <p class="text-zinc-500 text-xs mt-1">جربي تغيير نوع التصميم أو كلمة البحث</p>
+            <button onclick="resetFilters()" class="mt-4 px-5 py-2 bg-zinc-800 hover:bg-zinc-700 text-roseGold-300 text-xs rounded-xl transition font-bold">
+                إعادة ضبط الفلاتر
+            </button>
+        </div>
+
+        <!-- Custom Request Section -->
+        <section id="customRequestSection" class="mt-16 pt-8 border-t border-zinc-800">
+            <div class="glass-panel rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="inline-flex items-center gap-1.5 text-roseGold-300 text-xs font-bold">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <span>خدمة التفصيل الرقمي المخصص</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-black font-kufi text-white">تريدين تصميم خاص غير معروض؟</h3>
+                        <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                            يقوم فريق "أميرة" برسم وتطريز ونقش فكرتكِ الخاصة وتسليمكِ كافة الملفات للتصنيع والمكائن مباشرة.
+                        </p>
+                        <div class="space-y-2 pt-2 text-xs text-zinc-300">
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-gold-400"></i><span>حقوق ملكية وتصميم حصري لكِ</span></div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-gold-400"></i><span>تسليم صيغ DST, EMB, EPS, PNG, PDF</span></div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-gold-400"></i><span>تواصل وتعديلات مباشرة عبر الواتساب</span></div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 bg-black/60 p-5 sm:p-6 rounded-2xl border border-zinc-800">
+                        <form onsubmit="handleCustomRequestSubmit(event)" class="space-y-3.5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-medium text-zinc-300 mb-1">الاسم الكريم *</label>
+                                    <input type="text" id="customName" required class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-roseGold-300" placeholder="الأميرة...">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-zinc-300 mb-1">رقم الواتساب *</label>
+                                    <input type="tel" id="customPhone" required class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-roseGold-300" placeholder="010XXXXXXXX">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-medium text-zinc-300 mb-1">نوع التصميم المطلوب</label>
+                                    <select id="customType" class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-roseGold-300">
+                                        <option value="ثوب سوداني فاخر">ثوب سوداني فاخر</option>
+                                        <option value="طرحة / سكارف">طرحة / سكارف</option>
+                                        <option value="عباية راقية">عباية راقية</option>
+                                        <option value="طقم كامل (سجادة، ستائر، ملايات، مخاد)">طقم كامل (سجادة، ستائر، ملايات، مخاد)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-zinc-300 mb-1">نوع النقش المقترح</label>
+                                    <select id="customPatternType" class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-roseGold-300">
+                                        <option value="فراشات">فراشات</option>
+                                        <option value="ورود وزهور">ورود وزهور</option>
+                                        <option value="أشكال هندسية">أشكال هندسية</option>
+                                        <option value="تطريز ونقش فاخر">تطريز ونقش فاخر</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-medium text-zinc-300 mb-1">شرح فكرة التصميم والألوان</label>
+                                <textarea id="customDetails" rows="3" required class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-roseGold-300" placeholder="اكتبي تفاصيل الرسم والألوان وابعاد التطريز المطلوبة..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-whatsapp hover:bg-emerald-600 text-black font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-xs shadow-lg">
+                                <i class="fa-brands fa-whatsapp text-base"></i>
+                                <span>إرسال الطلب ومناقشة التفاصيل عبر الواتساب</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Quick Preview Modal -->
+    <div id="previewModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-royalCard border border-zinc-700 rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl relative my-6">
+            <button onclick="closePreviewModal()" class="absolute top-4 left-4 z-10 bg-black/70 hover:bg-black text-white w-8 h-8 rounded-full flex items-center justify-center text-xs border border-zinc-600">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="relative bg-black flex items-center justify-center p-4 min-h-[260px]">
+                    <img id="modalImage" src="" alt="" class="max-h-[340px] w-auto object-contain rounded-xl">
+                    <span id="modalBadge" class="absolute top-3 right-3 bg-roseGold-500 text-white font-bold text-[10px] px-2.5 py-1 rounded-full"></span>
+                </div>
+
+                <div class="p-6 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2 text-xs text-gold-400 font-semibold">
+                            <span id="modalCategory"></span>
+                            <span>•</span>
+                            <span id="modalSubcategory"></span>
+                        </div>
+                        <h3 id="modalTitle" class="text-xl font-black text-white font-kufi"></h3>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-xs text-zinc-400">السعر الثابت:</span>
+                            <span id="modalPrice" class="text-2xl font-black text-gold-300"></span>
+                        </div>
+                        
+                        <!-- Full Set Specification Display -->
+                        <div id="modalSetComponents" class="hidden bg-zinc-950 p-3 rounded-xl border border-roseGold-300/30 text-xs space-y-1.5">
+                            <span class="font-bold text-roseGold-300 block"><i class="fa-solid fa-box-open me-1"></i> مكونات الطقم الكامل (7 قطع):</span>
+                            <ul class="text-zinc-300 space-y-1 text-[11px]">
+                                <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-gold-400 text-[10px]"></i> 1 سجادة صلاة فاخرة</li>
+                                <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-gold-400 text-[10px]"></i> 2 ستارة متناسقة</li>
+                                <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-gold-400 text-[10px]"></i> 2 ملاية سرير</li>
+                                <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-gold-400 text-[10px]"></i> 2 مخدمة / أكياس وسائد</li>
+                            </ul>
+                        </div>
+
+                        <div class="border-t border-zinc-800 pt-3">
+                            <h4 class="text-[11px] font-bold text-zinc-400 mb-1.5">صيغ الملفات الرقمية الجاهزة للتنزيل:</h4>
+                            <div class="flex flex-wrap gap-1 text-[10px]">
+                                <span class="bg-zinc-900 text-gold-300 px-2 py-0.5 rounded border border-zinc-700">DST (ماكينات تطريز)</span>
+                                <span class="bg-zinc-900 text-gold-300 px-2 py-0.5 rounded border border-zinc-700">EMB (Wilcom)</span>
+                                <span class="bg-zinc-900 text-gold-300 px-2 py-0.5 rounded border border-zinc-700">EPS (Vector)</span>
+                                <span class="bg-zinc-900 text-gold-300 px-2 py-0.5 rounded border border-zinc-700">PNG / PDF عالية الدقة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="modalAddToCartBtn" class="w-full gold-bg-gradient text-black font-bold py-3 rounded-xl hover:opacity-95 transition flex items-center justify-center gap-2 text-xs shadow-lg">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>إضافة للحقيبة</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex justify-end">
+        <div class="bg-royalCard w-full max-w-md h-full flex flex-col justify-between border-r border-zinc-800 shadow-2xl">
+            
+            <div class="p-4 border-b border-zinc-800 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-crown text-gold-400"></i>
+                    <h3 class="text-sm font-bold text-white">حقيبة تصاميم أميرة</h3>
+                </div>
+                <button onclick="toggleCartModal()" class="text-zinc-400 hover:text-white p-1">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Items List -->
+            <div id="cartItemsList" class="p-4 overflow-y-auto flex-grow space-y-3">
+                <!-- Injected dynamically -->
+            </div>
+
+            <!-- Cart Footer -->
+            <div class="p-4 border-t border-zinc-800 bg-black/60 space-y-3">
+                <div class="flex justify-between items-center text-xs">
+                    <span class="text-zinc-400">الإجمالي النهائي:</span>
+                    <span id="cartTotalPrice" class="text-lg font-black text-gold-300">0 ج.م</span>
+                </div>
+                <button onclick="openCheckoutModal()" id="checkoutBtn" class="w-full vodafone-gradient text-white font-bold py-3 rounded-xl hover:opacity-95 transition flex items-center justify-center gap-2 text-xs disabled:opacity-50 shadow-lg">
+                    <i class="fa-solid fa-mobile-retro"></i>
+                    <span>إتمام الدفع عبر فودافون كاش</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Vodafone Cash Checkout Modal -->
+    <div id="checkoutModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-royalCard border border-zinc-700 rounded-3xl max-w-md w-full p-6 space-y-4 relative my-6">
+            <button onclick="closeCheckoutModal()" class="absolute top-4 left-4 text-zinc-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-base"></i>
+            </button>
+
+            <div class="text-center space-y-1">
+                <div class="w-12 h-12 bg-red-600/20 border border-red-500/40 rounded-2xl flex items-center justify-center text-red-500 mx-auto text-xl">
+                    <i class="fa-solid fa-mobile-retro"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white font-kufi">الدفع عبر فودافون كاش</h3>
+                <p class="text-[11px] text-zinc-400">حولي المبلغ المطلـوب للمحفظـة ثم أكدي عبر الواتساب</p>
+            </div>
+
+            <!-- Wallet Information Card -->
+            <div class="bg-zinc-950 border border-red-500/30 p-3.5 rounded-2xl space-y-2 text-xs">
+                <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
+                    <span class="text-zinc-400">رقم محفظة التحويل:</span>
+                    <div class="flex items-center gap-2">
+                        <span id="vodaNumber" class="text-sm font-black text-white tracking-widest" dir="ltr">01012345678</span>
+                        <button onclick="copyVodaNumber()" class="text-[10px] text-red-400 bg-red-500/10 hover:bg-red-500/20 px-2 py-0.5 rounded transition">نسخ</button>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center pt-0.5">
+                    <span class="text-zinc-400">إجمالي المطلوب سداده:</span>
+                    <span id="checkoutTotalAmount" class="text-base font-black text-gold-300">0 ج.م</span>
+                </div>
+            </div>
+
+            <!-- Checkout Form -->
+            <form onsubmit="handleCheckoutSubmit(event)" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-medium text-zinc-300 mb-1">الاسم الكريم *</label>
+                    <input type="text" id="custName" required class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-roseGold-300" placeholder="الأميرة...">
+                </div>
+                
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <label class="block text-xs font-medium text-zinc-300 mb-1">رقم التواصل *</label>
+                        <input type="tel" id="custPhone" required class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-roseGold-300" placeholder="010XXXXXXXX">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-zinc-300 mb-1">رقم محفظة المُموِّل *</label>
+                        <input type="tel" id="custSenderVoda" required class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-roseGold-300" placeholder="010XXXXXXXX">
+                    </div>
+                </div>
+
+                <!-- Receipt Upload Simulation -->
+                <div>
+                    <label class="block text-xs font-medium text-zinc-300 mb-1">إرفاق صورة إيصال التحويل (اختياري)</label>
+                    <div class="border border-dashed border-zinc-700 bg-zinc-950 rounded-xl p-2.5 text-center cursor-pointer hover:border-gold-500/50 transition">
+                        <input type="file" id="receiptFile" accept="image/*" class="hidden" onchange="updateFileName(this)">
+                        <label for="receiptFile" class="cursor-pointer flex items-center justify-center gap-1.5 text-[11px] text-zinc-400">
+                            <i class="fa-solid fa-paperclip text-gold-400"></i>
+                            <span id="fileNameDisplay">اختر صورة السكرين شوت أو الإيصال</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-whatsapp hover:bg-emerald-600 text-black font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-xs shadow-lg mt-1">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>تأكيد الطلب واستلام التصاميم عبر الواتساب</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 left-5 z-50 hidden bg-gold-400 text-black px-4 py-2.5 rounded-2xl font-bold shadow-2xl flex items-center gap-2 text-xs">
+        <i class="fa-solid fa-crown"></i>
+        <span id="toastMessage">تمت العملية بنجاح</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-zinc-800 py-8 mt-16 text-xs text-zinc-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-crown text-gold-400 text-sm"></i>
+                <span class="font-bold text-gray-300 font-kufi text-sm">أميرة | أميرة لكُـل أميرة</span>
+            </div>
+            <p>جميع الحقوق محفوظة © 2026 متجر أميرة للتصاميم الرقمية للأزياء والماكينات.</p>
+            <div class="flex gap-3 text-sm">
+                <a href="#" class="hover:text-gold-400 transition"><i class="fa-brands fa-whatsapp text-whatsapp"></i></a>
+                <a href="#" class="hover:text-gold-400 transition"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script>
+        const STORE_WHATSAPP_NUMBER = "201012345678";
+        const STORE_VODAFONE_CASH_NUM = "01012345678";
+
+        // Store Database with EXACT requested prices
+        const productsData = [
+            // 1. Sudanese Toub Category (ALL 20 LE)
+            {
+                id: 101,
+                title: "تصميم ثوب الفراشات الذهبية المحفورة",
+                category: "toub",
+                categoryName: "الثوب السوداني",
+                subCategory: "butterflies",
+                subCategoryName: "الفراشات",
+                price: 20,
+                rating: 5.0,
+                badge: "20 ج.م",
+                image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80",
+                date: "2026-03-01"
+            },
+            {
+                id: 102,
+                title: "نقش ثوب بستان الورود والزهور الجوري",
+                category: "toub",
+                categoryName: "الثوب السوداني",
+                subCategory: "flowers",
+                subCategoryName: "الورود والزهور",
+                price: 20,
+                rating: 4.9,
+                badge: "20 ج.م",
+                image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+                date: "2026-03-05"
+            },
+            {
+                id: 103,
+                title: "تطريز الثوب الهندسي المودرن",
+                category: "toub",
+                categoryName: "الثوب السوداني",
+                subCategory: "geometric",
+                subCategoryName: "الأشكال الهندسية",
+                price: 20,
+                rating: 4.8,
+                badge: "20 ج.م",
+                image: "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=800&q=80",
+                date: "2026-02-15"
+            },
+            {
+                id: 104,
+                title: "ثوب التطريز والتراث الملكي الفاخر",
+                category: "toub",
+                categoryName: "الثوب السوداني",
+                subCategory: "luxury",
+                subCategoryName: "تطريز ونقشات فاخرة",
+                price: 20,
+                rating: 5.0,
+                badge: "20 ج.م",
+                image: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=800&q=80",
+                date: "2026-03-10"
+            },
+
+            // 2. Scarves / Shawls Category (ALL 10 LE)
+            {
+                id: 201,
+                title: "طرحة أسراب الفراشات الرقيقة",
+                category: "scarves",
+                categoryName: "الطرح والسكارفات",
+                subCategory: "butterflies",
+                subCategoryName: "الفراشات",
+                price: 10,
+                rating: 4.9,
+                badge: "10 ج.م",
+                image: "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=800&q=80",
+                date: "2026-03-02"
+            },
+            {
+                id: 202,
+                title: "طرحة ورود الربيع الملونة",
+                category: "scarves",
+                categoryName: "الطرح والسكارفات",
+                subCategory: "flowers",
+                subCategoryName: "الورود والزهور",
+                price: 10,
+                rating: 4.8,
+                badge: "10 ج.م",
+                image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+                date: "2026-02-28"
+            },
+            {
+                id: 203,
+                title: "سكارف الخطوط والزوايا الهندسية",
+                category: "scarves",
+                categoryName: "الطرح والسكارفات",
+                subCategory: "geometric",
+                subCategoryName: "الأشكال الهندسية",
+                price: 10,
+                rating: 4.7,
+                badge: "10 ج.م",
+                image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
+                date: "2026-01-20"
+            },
+            {
+                id: 204,
+                title: "طرحة الحواف الملكية والتطريز الكثيف",
+                category: "scarves",
+                categoryName: "الطرح والسكارفات",
+                subCategory: "luxury",
+                subCategoryName: "تطريز ونقشات فاخرة",
+                price: 10,
+                rating: 4.9,
+                badge: "10 ج.م",
+                image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80",
+                date: "2026-03-08"
+            },
+
+            // 3. Abayas Category (ALL 15 LE)
+            {
+                id: 301,
+                title: "تطريز عباية الفراشات الذهبية",
+                category: "abayas",
+                categoryName: "العبايات",
+                subCategory: "butterflies",
+                subCategoryName: "الفراشات",
+                price: 15,
+                rating: 4.9,
+                badge: "15 ج.م",
+                image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80",
+                date: "2026-03-12"
+            },
+            {
+                id: 302,
+                title: "نقش أزهار التوليب للعبايات الراقية",
+                category: "abayas",
+                categoryName: "العبايات",
+                subCategory: "flowers",
+                subCategoryName: "الورود والزهور",
+                price: 15,
+                rating: 4.8,
+                badge: "15 ج.م",
+                image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80",
+                date: "2026-03-04"
+            },
+            {
+                id: 303,
+                title: "عباية الأشكال الهندسية العصرية",
+                category: "abayas",
+                categoryName: "العبايات",
+                subCategory: "geometric",
+                subCategoryName: "الأشكال الهندسية",
+                price: 15,
+                rating: 4.7,
+                badge: "15 ج.م",
+                image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
+                date: "2026-02-18"
+            },
+
+            // 4. Full Sets Category (ALL 50 LE - سجادة صلاة + 2 ستارة + 2 ملاية + 2 مخدمة)
+            {
+                id: 401,
+                title: "طقم أميرة الكامل بنقش الفراشات الملكية",
+                category: "fullsets",
+                categoryName: "الأطقم الكاملة",
+                subCategory: "butterflies",
+                subCategoryName: "الفراشات",
+                price: 50,
+                rating: 5.0,
+                badge: "50 ج.م (7 قطع)",
+                isFullSet: true,
+                image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
+                date: "2026-03-14"
+            },
+            {
+                id: 402,
+                title: "طقم صلاة ومنزل كامل بتطريز ورود الجوري",
+                category: "fullsets",
+                categoryName: "الأطقم الكاملة",
+                subCategory: "flowers",
+                subCategoryName: "الورود والزهور",
+                price: 50,
+                rating: 4.9,
+                badge: "50 ج.م (7 قطع)",
+                isFullSet: true,
+                image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80",
+                date: "2026-03-11"
+            },
+            {
+                id: 403,
+                title: "طقم النقش الهندسي العربي الموحد",
+                category: "fullsets",
+                categoryName: "الأطقم الكاملة",
+                subCategory: "geometric",
+                subCategoryName: "الأشكال الهندسية",
+                price: 50,
+                rating: 4.8,
+                badge: "50 ج.م (7 قطع)",
+                isFullSet: true,
+                image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80",
+                date: "2026-03-07"
+            }
+        ];
+
+        // Pattern Subcategories Filter Options
+        const patternSubCategories = [
+            { id: 'all', name: 'جميع النقشات' },
+            { id: 'butterflies', name: 'الفراشات 🦋' },
+            { id: 'flowers', name: 'الورود والزهور 🌸' },
+            { id: 'geometric', name: 'الأشكال الهندسية 📐' },
+            { id: 'luxury', name: 'تطريز ونقشات فاخرة ✨' }
+        ];
+
+        let currentCategory = 'all';
+        let currentSubCategory = 'all';
+        let searchQuery = '';
+        let cart = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderSubCategories();
+            renderProducts();
+        });
+
+        function setCategory(catKey) {
+            currentCategory = catKey;
+            currentSubCategory = 'all';
+
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('text-roseGold-300', 'bg-roseGold-300/10');
+                btn.classList.add('text-gray-300');
+            });
+            const activeNav = document.getElementById(`nav-${catKey}`);
+            if(activeNav) {
+                activeNav.classList.add('text-roseGold-300', 'bg-roseGold-300/10');
+                activeNav.classList.remove('text-gray-300');
+            }
+
+            const titles = {
+                all: { title: "جميع تصاميم أميرة", desc: "تصفحي الملفات الرقمية الجاهزة للطباعة والتطريز المباشر" },
+                toub: { title: "قسم الثوب السوداني (20 ج.م)", desc: "جميع تصاميم ونقشات الثوب السوداني بسعر ثابت 20 ج.م للتصميم" },
+                scarves: { title: "قسم الطرح والسكارفات (10 ج.م)", desc: "نقشات حواف وجسم الطرح والسكارفات بسعر ثابت 10 ج.م" },
+                abayas: { title: "قسم العبايات (15 ج.م)", desc: "تطريز ونقش العبايات بجميع أشكالها بسعر ثابت 15 ج.م" },
+                fullsets: { title: "قسم الأطقم الكاملة (50 ج.م)", desc: "يتكون كل طقم من: سجادة صلاة + 2 ستارة + 2 ملاية + 2 مخدمة" }
+            };
+            document.getElementById('currentCategoryTitle').innerText = titles[catKey].title;
+            document.getElementById('currentCategoryDesc').innerText = titles[catKey].desc;
+
+            renderSubCategories();
+            applyFilters();
+        }
+
+        function setSubCategory(subKey) {
+            currentSubCategory = subKey;
+            renderSubCategories();
+            applyFilters();
+        }
+
+        function renderSubCategories() {
+            const container = document.getElementById('subCategoryContainer');
+            container.innerHTML = patternSubCategories.map(sub => {
+                const isActive = sub.id === currentSubCategory;
+                return `
+                    <button onclick="setSubCategory('${sub.id}')" class="px-3.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition ${
+                        isActive 
+                        ? 'rose-gold-gradient text-black shadow-md' 
+                        : 'bg-zinc-950 text-zinc-300 hover:bg-zinc-800 border border-zinc-800'
+                    }">
+                        ${sub.name}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function handleSearch() {
+            searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
+            applyFilters();
+        }
+
+        function handleSearchMobile() {
+            searchQuery = document.getElementById('searchInputMobile').value.trim().toLowerCase();
+            applyFilters();
+        }
+
+        function applyFilters() {
+            let filtered = [...productsData];
+
+            if (currentCategory !== 'all') {
+                filtered = filtered.filter(item => item.category === currentCategory);
+            }
+
+            if (currentSubCategory !== 'all') {
+                filtered = filtered.filter(item => item.subCategory === currentSubCategory);
+            }
+
+            if (searchQuery !== '') {
+                filtered = filtered.filter(item => 
+                    item.title.toLowerCase().includes(searchQuery) ||
+                    item.categoryName.toLowerCase().includes(searchQuery) ||
+                    item.subCategoryName.toLowerCase().includes(searchQuery)
+                );
+            }
+
+            const sortVal = document.getElementById('sortSelect').value;
+            if (sortVal === 'price-low') {
+                filtered.sort((a, b) => a.price - b.price);
+            } else if (sortVal === 'price-high') {
+                filtered.sort((a, b) => b.price - a.price);
+            } else if (sortVal === 'popular') {
+                filtered.sort((a, b) => b.rating - a.rating);
+            } else {
+                filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+            }
+
+            renderProducts(filtered);
+        }
+
+        function renderProducts(list = productsData) {
+            const grid = document.getElementById('productsGrid');
+            const emptyState = document.getElementById('emptyState');
+
+            if (list.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            grid.innerHTML = list.map(product => `
+                <div class="glass-card rounded-2xl overflow-hidden transition duration-300 flex flex-col justify-between group shadow-xl">
+                    <div>
+                        <div class="relative h-56 overflow-hidden bg-black/60">
+                            <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-2.5 right-2.5 bg-black/85 text-gold-300 border border-gold-500/40 text-[10px] font-bold px-2.5 py-1 rounded-full shadow">
+                                ${product.badge}
+                            </span>
+                            <button onclick="openPreviewModal(${product.id})" class="absolute bottom-2.5 left-2.5 bg-zinc-950/80 hover:bg-roseGold-300 hover:text-black text-white p-2 rounded-full text-xs transition border border-zinc-700" title="معاينة تفاصيل المكونات">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+
+                        <div class="p-4 space-y-2">
+                            <div class="flex items-center justify-between text-[11px] text-gold-400">
+                                <span>${product.categoryName}</span>
+                                <span class="bg-zinc-900 text-roseGold-300 border border-roseGold-300/20 px-2 py-0.5 rounded text-[10px]">${product.subCategoryName}</span>
+                            </div>
+                            <h3 class="font-bold text-sm text-white group-hover:text-roseGold-300 transition line-clamp-1 font-kufi">${product.title}</h3>
+                            
+                            ${product.isFullSet ? `
+                                <div class="bg-zinc-950/90 p-2 rounded-xl text-[10px] text-zinc-300 space-y-0.5 border border-roseGold-300/20">
+                                    <div class="text-roseGold-300 font-bold"><i class="fa-solid fa-layer-group me-1"></i> يتكون الطقم من:</div>
+                                    <div class="text-zinc-400">سجادة + 2 ستارة + 2 ملاية + 2 مخدمة</div>
+                                </div>
+                            ` : ''}
+
+                            <div class="flex items-center gap-1 text-xs text-amber-400 pt-0.5">
+                                <i class="fa-solid fa-star text-[10px]"></i>
+                                <span class="text-zinc-300 font-semibold text-[11px]">${product.rating}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 pt-0 flex items-center justify-between border-t border-zinc-800/80 mt-2 pt-3">
+                        <div>
+                            <span class="text-[10px] text-zinc-500 block">السعر الثابت</span>
+                            <span class="text-lg font-black text-gold-300">${product.price} <span class="text-xs font-normal">ج.م</span></span>
+                        </div>
+                        <button onclick="addToCart(${product.id})" class="rose-gold-gradient text-black font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 hover:opacity-95 transition shadow">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>إضافة</span>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openPreviewModal(productId) {
+            const product = productsData.find(p => p.id === productId);
+            if (!product) return;
+
+            document.getElementById('modalImage').src = product.image;
+            document.getElementById('modalBadge').innerText = product.badge;
+            document.getElementById('modalCategory').innerText = product.categoryName;
+            document.getElementById('modalSubcategory').innerText = product.subCategoryName;
+            document.getElementById('modalTitle').innerText = product.title;
+            document.getElementById('modalPrice').innerText = `${product.price} ج.م`;
+
+            const setBox = document.getElementById('modalSetComponents');
+            if (product.isFullSet) {
+                setBox.classList.remove('hidden');
+            } else {
+                setBox.classList.add('hidden');
+            }
+
+            const addBtn = document.getElementById('modalAddToCartBtn');
+            addBtn.onclick = () => {
+                addToCart(product.id);
+                closePreviewModal();
+            };
+
+            document.getElementById('previewModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePreviewModal() {
+            document.getElementById('previewModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function addToCart(productId) {
+            const product = productsData.find(p => p.id === productId);
+            if (!product) return;
+
+            const existingIndex = cart.findIndex(item => item.id === productId);
+            if (existingIndex > -1) {
+                cart[existingIndex].quantity += 1;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+
+            updateCartUI();
+            showToast(`تمت إضافة "${product.title}" إلى الحقيبة`);
+        }
+
+        function updateCartQuantity(productId, delta) {
+            const index = cart.findIndex(item => item.id === productId);
+            if (index > -1) {
+                cart[index].quantity += delta;
+                if (cart[index].quantity <= 0) {
+                    cart.splice(index, 1);
+                }
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            document.getElementById('cartCount').innerText = totalCount;
+            document.getElementById('cartTotalPrice').innerText = `${totalPrice} ج.م`;
+            document.getElementById('checkoutTotalAmount').innerText = `${totalPrice} ج.م`;
+
+            const cartList = document.getElementById('cartItemsList');
+            const checkoutBtn = document.getElementById('checkoutBtn');
+
+            if (cart.length === 0) {
+                cartList.innerHTML = `
+                    <div class="text-center py-16 text-zinc-500">
+                        <i class="fa-solid fa-crown text-4xl mb-3 opacity-20 text-gold-400"></i>
+                        <p class="text-xs">حقيبة التجميع فارغة حالياً</p>
+                    </div>
+                `;
+                checkoutBtn.disabled = true;
+            } else {
+                checkoutBtn.disabled = false;
+                cartList.innerHTML = cart.map(item => `
+                    <div class="flex items-center gap-3 bg-zinc-950 p-2.5 rounded-xl border border-zinc-800">
+                        <img src="${item.image}" alt="" class="w-14 h-14 object-cover rounded-lg">
+                        <div class="flex-grow min-w-0">
+                            <h4 class="text-xs font-bold text-white truncate font-kufi">${item.title}</h4>
+                            <span class="text-xs text-gold-300 font-semibold">${item.price} ج.م</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 bg-zinc-900 border border-zinc-700 rounded-lg px-2 py-1">
+                            <button onclick="updateCartQuantity(${item.id}, -1)" class="text-xs text-zinc-400 hover:text-white px-1">-</button>
+                            <span class="text-xs font-bold text-white px-1">${item.quantity}</span>
+                            <button onclick="updateCartQuantity(${item.id}, 1)" class="text-xs text-zinc-400 hover:text-white px-1">+</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function toggleCartModal() {
+            document.getElementById('cartModal').classList.toggle('hidden');
+        }
+
+        function openCheckoutModal() {
+            toggleCartModal();
+            document.getElementById('checkoutModal').classList.remove('hidden');
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkoutModal').classList.add('hidden');
+        }
+
+        function copyVodaNumber() {
+            const num = STORE_VODAFONE_CASH_NUM;
+            const temp = document.createElement("input");
+            temp.value = num;
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand("copy");
+            document.body.removeChild(temp);
+            showToast("تم نسخ رقم المحفظة: " + num);
+        }
+
+        function updateFileName(input) {
+            const display = document.getElementById('fileNameDisplay');
+            if(input.files && input.files[0]) {
+                display.innerText = "مُرفق: " + input.files[0].name;
+            } else {
+                display.innerText = "اختر صورة السكرين شوت أو الإيصال";
+            }
+        }
+
+        function handleCheckoutSubmit(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            const senderVoda = document.getElementById('custSenderVoda').value.trim();
+            const orderId = "AMIRA-" + Math.floor(100000 + Math.random() * 900000);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            let itemsText = cart.map((item, idx) => {
+                let text = `${idx + 1}. ${item.title} (${item.quantity}×) - ${item.price * item.quantity} ج.م`;
+                if(item.isFullSet) text += `\n    └ (يشمل: سجادة صلاة + 2 ستارة + 2 ملاية + 2 مخدمة)`;
+                return text;
+            }).join("\n");
+
+            let message = `👑 *طلب تصميم جديد - متجر أميرة* 👑\n`;
+            message += `_أميرة لكُـل أميرة_\n\n`;
+            message += `📌 *رقم الطلب:* #${orderId}\n`;
+            message += `👤 *اسم العميل:* ${name}\n`;
+            message += `📞 *رقم التواصل:* ${phone}\n`;
+            message += `💳 *طريقة الدفع:* فودافون كاش\n`;
+            message += `📱 *رقم محفظة المُموِّل:* ${senderVoda}\n\n`;
+            message += `🛒 *التصاميم المطلوبة:*\n${itemsText}\n\n`;
+            message += `💰 *المبلغ الإجمالي:* ${totalPrice} ج.م\n\n`;
+            message += `✨ *مرفق صورة إيصال التحويل لإرسال روابط ملفات التطريز والطباعة الفورية.*`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${STORE_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+            closeCheckoutModal();
+            cart = [];
+            updateCartUI();
+            
+            showToast("جاري توجيهك للواتساب لتأكيد الدفع واستلام الملفات...");
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+            }, 1000);
+        }
+
+        function handleCustomRequestSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('customName').value.trim();
+            const phone = document.getElementById('customPhone').value.trim();
+            const type = document.getElementById('customType').value;
+            const pattern = document.getElementById('customPatternType').value;
+            const details = document.getElementById('customDetails').value.trim();
+
+            let message = `👑 *طلب تصميم مخصص - أميرة لكُـل أميرة* 👑\n\n`;
+            message += `👤 *الاسم:* ${name}\n`;
+            message += `📞 *رقم الهاتف:* ${phone}\n`;
+            message += `👗 *النوع:* ${type}\n`;
+            message += `🎨 *نوع النقش:* ${pattern}\n`;
+            message += `📝 *التفاصيل والألوان:*\n${details}\n\n`;
+            message += `أود معرفة التكلفة والوقت اللازم للتنفيذ.`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${STORE_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+            e.target.reset();
+            showToast("جاري فتح الواتساب لمناقشة الطلب الخاص...");
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+            }, 1000);
+        }
+
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('searchInputMobile').value = '';
+            searchQuery = '';
+            setCategory('all');
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+
+        function scrollToCustomRequest() {
+            document.getElementById('customRequestSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').innerText = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
